@@ -1,0 +1,33 @@
+{
+  "name": "cucumberAllureSample",
+  "type": "module",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.4.0",
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "@faker-js/faker": "^8.0.2",
+    "@types/chai": "^4.3.5",
+    "@types/expect": "^24.3.0",
+    "@types/mocha": "^10.0.1",
+    "@types/mochawesome": "^6.2.1",
+    "@types/node": "^20.5.7",
+    "allure-commandline": "^2.24.0",
+    "allure-cucumberjs": "^2.6.0",
+    "allure-js-commons": "^2.6.0",
+    "allure-mocha": "^2.6.0",
+    "axios": "^1.5.0",
+    "chai": "^4.3.8",
+    "dotenv": "^16.3.1",
+    "lodash": "^4.17.21",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.2.2",
+    "wdio-wait-for": "^3.0.6"
+  },
+  "scripts": {
+    "clean-report": "rm -r allure-results allure-report dummy.txt",
+    "allure-report": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "api-test:cucumber": "NODE_OPTIONS='--loader ts-node/esm' cucumber-js",
+    "api-test:cucumber:sample": "NODE_OPTIONS='--loader ts-node/esm' cucumber-js --tags '@sample'"
+  }
+}

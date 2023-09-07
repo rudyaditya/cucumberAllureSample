@@ -1,0 +1,15 @@
+{
+  "default": {
+    "format": ["./cucumberReporter.js:dummy.txt", "@cucumber/pretty-formatter"],
+    "paths": [
+      "test/cucumber/features/**/*.feature",
+      "test/examples/cucumber/features/**/*.feature"
+    ],
+    "forceExit": true,
+    "requireModule": ["ts-node/register"],
+    "import": [
+      "test/cucumber/step_definitions/**/*.ts",
+      "test/examples/cucumber/step_definitions/**/*.ts"
+    ]
+  }
+}
