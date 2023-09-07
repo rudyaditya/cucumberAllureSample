@@ -3,7 +3,6 @@ allure-results
 allure-report
 package-lock.json
 dummy.txt
-.env
 
 ### VisualStudioCode template
 .vscode/*
